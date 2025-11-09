@@ -57,24 +57,25 @@ public class Group {
 		}
 		return false;
 	}
-	public void sortStudentsByLastName() {
-        Arrays.sort(students, new Comparator<Student>() {
-            @Override
-            public int compare(Student s1, Student s2) {
-                if (s1 == null && s2 == null) {
-                    return 0;
-                }
-                if (s1 == null) {
-                    return 1;
-                }
-                if (s2 == null) {
-                    return -1;
-                }
-                return s1.getLastName().compareTo(s2.getLastName());
-            }
-        });
-    }
 
+	public void sortStudentsByLastName() {
+		Arrays.sort(students, new Comparator<Student>() {
+			@Override
+			public int compare(Student s1, Student s2) {
+				if (s1 == null && s2 == null) {
+					return 0;
+				}
+				if (s1 == null) {
+					return 1;
+				}
+				if (s2 == null) {
+					return -1;
+				}
+				return s1.getLastName().compareToIgnoreCase(s2.getLastName());
+
+			}
+		});
+	}
 
 	@Override
 	public String toString() {
