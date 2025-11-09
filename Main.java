@@ -102,7 +102,7 @@ public class Main {
 			            Group loaded = gfs.loadGroupFromCSV(f);
 			            System.out.println("Loaded group from CSV:");
 			            System.out.println(loaded);
-			            group = loaded; // якщо хочеш замінити поточну групу
+			            group = loaded; 
 			        }
 			    } catch (RuntimeException ex) {
 			        System.out.println("Load error: " + ex.getMessage());
